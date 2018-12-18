@@ -1,0 +1,160 @@
+.container-fluid    {
+    width: 100%;
+}
+
+/*Navbar background colour change */
+
+nav {
+    border-radius: 0 !important;
+    background-color: #333 !important;
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 15px;
+}
+
+.navbar  {
+    margin-bottom: 0;
+    border-bottom-color: #333;
+}
+
+
+/* Navbar brand formatting */
+
+.navbar-brand   {
+    font-family: 'Oxygen', sans-serif;
+    color: white !important;
+    padding-left: 10px;
+    padding-right: 15px;
+}
+
+
+/* Hover changes */
+
+#navbar ul li a:hover    {
+    background-color: #4F4F4F;
+}
+
+.dropdown-menu li a:hover {
+    color: #f6f6f6;
+    background-color: #4F4F4F;
+}
+
+
+/* Glyphicon color change one active */
+
+.active .glyphicon-home {
+    color:red;
+}
+
+.active .glyphicon-calendar {
+    color:red;
+}
+
+.active .glyphicon-list-alt {
+    color:red;
+}
+
+.active .glyphicon-book {
+    color:red;
+}
+
+.active .glyphicon-option-vertical {
+    color:red;
+}
+
+.active .glyphicon-envelope {
+    color:red;
+}
+
+
+/* Social Media Icons */
+
+.socialMedia   {
+    color: #7e7e7e;
+}
+
+.socialMedia:hover   {
+    color: #f6f6f6;
+}
+
+.media-font-change  {
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 18px !important;
+}
+
+
+/* Side Images */
+
+.row    {
+}
+
+.bottomImage  {
+    max-width:100%;
+    vertical-align: middle;
+}
+
+.centerText    {
+    text-align: center;
+}
+
+.jumbotron  {
+    margin-bottom: 0;
+    background-image: url(../images/instagram_banner_333.png);
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    height: 220px;
+    background-color: #333;
+    border-bottom: 1px;
+    border-bottom-color: #4F4F4F;
+}
+
+#vcenterBpow {
+    position: relative;
+    top: 50%;
+    transform: translateY(30%);
+}
+
+#vcenterEpa {
+    position: relative;
+    top: 50%;
+    transform: translateY(45%);
+}
+
+
+/* Body Fonts */
+
+.font-change {
+    font-family: 'Raleway', sans-serif;
+}
+
+.EventsPageTableHeadings  {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+
+/* Records Page iFrame */
+
+.responsive-iframe-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.responsive-iframe-container iframe,
+.vresponsive-iframe-container object,
+.vresponsive-iframe-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Events Page Dates Centre */
+
+.eventsPageDates    {
+    text-align: center;
+}
