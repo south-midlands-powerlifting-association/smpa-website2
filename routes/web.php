@@ -13,19 +13,24 @@
 
 Route::get('/', function () {
     return view('home');
-});
+})->name("home");
 
 
 Route::get('/results', function () {
     return view('results');
-});
+})->name("results");
 
 
 Route::get('/events', function () {
     return view('events');
-});
+})->name("events");
 
 
 Route::get('/records', function () {
     return view('records');
-});
+})->name("records");
+
+\Illuminate\Support\Facades\Auth::routes();
+
+
+Route::get("/control_panel", "ControlPanelController@index")->name("control_panel")->middleware("auth");

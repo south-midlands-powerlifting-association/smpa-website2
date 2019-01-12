@@ -29,10 +29,45 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-                <li><a href="/events"><span class="glyphicon glyphicon-calendar"></span> Events</a></li>
-                <li><a href="/results"><span class="glyphicon glyphicon-list-alt"></span> Results</a></li>
-                <li><a href="/records"><span class="glyphicon glyphicon-book"></span> Records</a></li>
+                <li class="active"><a href="{{ route("home") }}"><span class="glyphicon glyphicon-home"></span> Home</a>
+                </li>
+                <li><a href="{{ route("events") }}"><span class="glyphicon glyphicon-calendar"></span> Events</a></li>
+                <li><a href="{{ route("results") }}"><span class="glyphicon glyphicon-list-alt"></span> Results</a></li>
+                <li><a href="{{ route("records") }}"><span class="glyphicon glyphicon-book"></span> Records</a></li>
+
+                @guest
+
+                    <li>
+                        <a href="{{ route("login") }}">
+                            Login
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route("register") }}">
+                            Register
+                        </a>
+                    </li>
+                @else
+                    <li>
+                        <a href="{{ route("control_panel") }}">
+                            Control panel
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route("logout") }}"
+                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            Logout
+                        </a>
+                        <form id="logout-form"
+                              action="{{ url('/logout') }}"
+                              method="POST"
+                              style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    </li>
+                @endauth
+
             </ul>
             <ul class="nav navbar-nav navbar-right hidden-sm hidden-md">
                 <li><a href="https://www.britishpowerlifting.org/buy-membership" target="_blank"><span
@@ -66,7 +101,9 @@
 </div>
 
 
-@yield('content')
+<div class="container font-change">
+    @yield('content')
+</div>
 
 
 <!-- division icons footer -->
